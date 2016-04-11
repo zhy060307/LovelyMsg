@@ -14,8 +14,7 @@
         <uses-permission android:name="android.permission.INTERNET"/>
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
-        <activity android:name="com.zhy.lovelymsg.AppStart"
-                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <activity android:name="com.zhy.lovelymsg.AppStart">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

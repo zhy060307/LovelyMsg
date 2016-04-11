@@ -1,6 +1,5 @@
 package com.zhy.lovelymsg.ui;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -12,7 +11,6 @@ import com.zhy.lovelymsg.R;
 import com.zhy.lovelymsg.ui.fragment.AboutMeFragment;
 import com.zhy.lovelymsg.ui.fragment.ChatsFragment;
 import com.zhy.lovelymsg.ui.fragment.DiscoverFragment;
-import com.zhy.lovelymsg.ui.fragment.OnFragmentInteractionListener;
 import com.zhy.lovelymsg.ui.view.GradientIconView;
 import com.zhy.lovelymsg.ui.view.GradientTextView;
 
@@ -27,7 +25,7 @@ import java.util.List;
  * @author zhaohaiyang
  * @since v0.0.1
  */
-public class MainActivity extends FragmentActivity implements View.OnClickListener, ViewPager.OnPageChangeListener ,OnFragmentInteractionListener {
+public class MainActivity extends FragmentActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
 
     private ViewPager mViewPager;
     private List<Fragment> mTabs = new ArrayList<Fragment>();
@@ -182,11 +180,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     @Override
     public void onPageScrollStateChanged(int state) {
-
-    }
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
 
     }
 }
