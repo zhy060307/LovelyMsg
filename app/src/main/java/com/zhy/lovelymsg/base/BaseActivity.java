@@ -8,9 +8,6 @@ import com.zhy.lovelymsg.AppManager;
 import com.zhy.lovelymsg.R;
 import com.zhy.lovelymsg.ui.dialog.IDialogView;
 import com.zhy.lovelymsg.utils.DialogHelp;
-
-import org.xutils.x;
-
 /**
  * <p>
  * 创建时间: 16/2/11 下午12:08 <br/>
@@ -32,7 +29,6 @@ public abstract class BaseActivity extends Activity implements IDialogView {
         if (getLayoutId() != 0) {
             setContentView(getLayoutId());
         }
-        x.view().inject(this);
         init(savedInstanceState);
         initView();
         initData();

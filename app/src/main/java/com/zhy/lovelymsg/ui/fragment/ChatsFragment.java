@@ -11,24 +11,18 @@ import com.zhy.lovelymsg.R;
 import com.zhy.lovelymsg.base.BaseFragment;
 import com.zhy.lovelymsg.ui.adapter.ContentAdapter;
 
-import org.xutils.view.annotation.ViewInject;
-import org.xutils.x;
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class ChatsFragment extends BaseFragment {
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    private String mParam1;
-    private String mParam2;
 
-    @ViewInject(R.id.lv_ms_list)
-    private ListView listView;
+    @Bind(R.id.lv_ms_list)
+    ListView listView;
 
     public static ChatsFragment newInstance(String param1, String param2) {
         ChatsFragment fragment = new ChatsFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -39,17 +33,13 @@ public class ChatsFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_chats, container, false);
-        x.view().inject(this, view);
+        ButterKnife.bind(this,view);
         return view;
     }
 

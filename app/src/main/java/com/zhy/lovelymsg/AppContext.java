@@ -2,8 +2,6 @@ package com.zhy.lovelymsg;
 
 import android.app.Application;
 
-import org.xutils.x;
-
 /**
  *
  * <p/>
@@ -18,7 +16,5 @@ public class AppContext extends Application {
     public void onCreate() {
         super.onCreate();
 
-        x.Ext.init(this);
-        x.Ext.setDebug(true); // 是否输出debug日志
     }
 }

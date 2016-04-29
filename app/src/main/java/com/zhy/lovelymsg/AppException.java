@@ -11,8 +11,6 @@ import com.zhy.lovelymsg.utils.FileUtils;
 import com.zhy.lovelymsg.utils.SystemTool;
 import com.zhy.lovelymsg.utils.UIHelper;
 
-import org.xutils.ex.HttpException;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -22,6 +20,8 @@ import java.lang.Thread.UncaughtExceptionHandler;
 import java.net.ConnectException;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+
+import retrofit2.adapter.rxjava.HttpException;
 
 
 /**
